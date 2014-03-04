@@ -11,7 +11,6 @@
     <form method="POST" action="<%= url_for :action => :create %>">
       <input type="hidden" name="id" value="<%= @employee.object %>"/>
 
-      
           <div data-role="fieldcontain">
             <label for="employee[Name]" class="fieldLabel">Name</label>
             <input type="text" id="employee[Name]" name="employee[Name]" <%= placeholder("Name") %> />
@@ -19,12 +18,17 @@
       
           <div data-role="fieldcontain">
             <label for="employee[Company]" class="fieldLabel">Company</label>
-            <input type="text" id="employee[Company]" name="employee[Company]" <%= placeholder("Company") %> />
+              <select name="employee[Company]">
+              <option value="Facebook" selected>Facebook</
+              option>
+              <option value="Twitter">Twitter</option>
+              <option value="Google">Google</option>
+              </select>
           </div>
       
           <div data-role="fieldcontain">
             <label for="employee[Address]" class="fieldLabel">Address</label>
-            <input type="text" id="employee[Address]" name="employee[Address]" <%= placeholder("Address") %> />
+            <textarea class="textarea" rows="5" cols="30" name="employee[Address]"> </textarea>
           </div>
       
           <div data-role="fieldcontain">
@@ -34,7 +38,12 @@
       
           <div data-role="fieldcontain">
             <label for="employee[Gender]" class="fieldLabel">Gender</label>
-            <input type="text" id="employee[Gender]" name="employee[Gender]" <%= placeholder("Gender") %> />
+              <label for="employee[Gender]">Male</label>
+              <input type="radio" name="employee[Gender]"
+              value="male"/>
+              <label for="task[status]">Female</label>
+              <input type="radio" name="employee[Gender]"
+              value="female"/>
           </div>
       
 

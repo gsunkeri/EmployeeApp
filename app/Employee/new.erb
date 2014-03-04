@@ -16,20 +16,25 @@
             <input type="text" id="employee[Name]" name="employee[Name]" <%= placeholder("Name") %> />
           </div>
       
-          <div data-role="fieldcontain">
-            <label for="employee[Company]" class="fieldLabel">Company</label>
+          <tabel>
+              <tr>
+              <td class="itemLabel">Company: </td>
+              <td class="itemValue">
               <select name="employee[Company]">
               <option value="Facebook" selected>Facebook</
               option>
               <option value="Twitter">Twitter</option>
               <option value="Google">Google</option>
               </select>
-          </div>
+              </td>
+              </tr>
       
-          <div data-role="fieldcontain">
-            <label for="employee[Address]" class="fieldLabel">Address</label>
-            <textarea class="textarea" rows="5" cols="30" name="employee[Address]"> </textarea>
-          </div>
+              <tr>
+              <td class="itemLabel">Address: </td>
+              <td class="itemValue"><textarea rows="3" cols="10"
+              name= "employee[Address]" ></textarea></td>
+              </tr>
+           </tabel>
       
           <div data-role="fieldcontain">
             <label for="employee[Age]" class="fieldLabel">Age</label>

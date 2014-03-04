@@ -1,8 +1,10 @@
 require 'rho/rhocontroller'
 require 'helpers/browser_helper'
+require 'helpers/employee_helper'
 
 class EmployeeController < Rho::RhoController
   include BrowserHelper
+  include EmployeeHelper
 
   # GET /Employee
   def index
@@ -55,4 +57,11 @@ class EmployeeController < Rho::RhoController
     @employee.destroy if @employee
     redirect :action => :index  
   end
+  
+  def employee_details
+    @employees = Employee.find(:all)
+        render :back => '/app'
+  end
+  
+  
 end

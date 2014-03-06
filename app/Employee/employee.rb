@@ -7,4 +7,6 @@ class Employee
   # enable :sync
 
   #add model specific code here
+  belongs_to :Company , 'Company'
+  
 end

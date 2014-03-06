@@ -25,6 +25,7 @@ class EmployeeController < Rho::RhoController
   # GET /Employee/new
   def new
     @employee = Employee.new
+    @companies = Company.find(:all)
     render :action => :new, :back => url_for(:action => :index)
   end
 

@@ -19,7 +19,15 @@
           <tabel>
               <tr>
               <td class="itemLabel">Company: </td>
-              
+              <td class="itemValue">
+              <select name="employee[Company]">
+                <% @companies.each do |company|%>
+                <option value="<%= company.name%>">
+                  <%=company.name %>
+                 </option>
+                <%end%>
+              </select>
+              </td>
               </tr>
       
               <tr>
